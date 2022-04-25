@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>SUp</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center>
+        <h1>List of the students in my class</h1>
+        <span>1</span><input id="s1" placeholder="Enter Name"><br>
+        <span>2</span><input id="s2" placeholder="Enter Name"><br>
+        <span>3</span><input id="s3" placeholder="Enter Name"><br>
+        <span>4</span><input id="s4" placeholder="Enter Name"><br>
+        <h3 id="sl"></h3>
+        <button id="sb" onclick="sub()">Submit</button>
+        <br>
+        <button id="sr" onclick="sor()">Sort</button>
+        </center>
+    </body>
+    <script>
+      var sname = []
+      function sub()
+      {
+          var n1 = document.getElementById("s1").value;
+          var n2 = document.getElementById("s2").value;
+          var n3 = document.getElementById("s3").value;
+          var n4 = document.getElementById("s4").value;
+          sname.push(n1);
+          sname.push(n2);
+          sname.push(n3);
+          sname.push(n4);
+          document.getElementById("sl").innerHTML = sname;
+          document.getElementById("sb").style.display = "none";
+          document.getElementById("sr").style.display = "inline";
+      }
+      function sor()
+      {
+      sname.sort()
+      document.getElementById("sl").innerHTML = sname;
+      }
+    </script>
+</html>
